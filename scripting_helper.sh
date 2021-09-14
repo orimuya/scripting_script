@@ -94,4 +94,30 @@ python_for_loop(){
 	echo "\t <commands>"
 }
 
+if [ -z "$language" ] || [ -z "$concept" ]
+then
+#Menu System to allow for easier interaction
+while :
+do
+	clear
+	echo "Hello Dave, what language are you using?"
+	echo "1. Bash"
+	echo "2. Python"
+	echo "3. Exit"
+	echo -n "Please make a selection [1 -3]"
+	read opt
+	case $opt in 
+		1) echo "Good Choice";
+		   exit 1;;
+		2) echo "Better Choice";
+		   exit 1;;
+		3) echo "Goodbye Dave";
+		   exit 1;;
+		*) echo "I can't let you do that Dave";
+		   echo "Please [enter] to continue. . .";
+		   read enterKey;;
+	esac
+done
+else
 $language\_$concept
+fi
