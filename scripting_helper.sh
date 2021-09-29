@@ -72,6 +72,17 @@ bash_special_chars(){
 	echo "Special characters are escaped using \\"
 }
 
+bash_special_parameters(){
+	echo "\$* Expands to the postional parameters. When quoted expands to a single word seperated by the first character of the IFS variable"
+	echo "\$@ Expands to the postional parameters. When quoted expands to seperate words."
+	echo "\$# Expands to the number of postional parameters as a decimal."
+	echo "\$? Expands to the exit code of the most recented executed foreground pipe"
+	echo "\$- Exapnds to the current options flags specifed upon invovation, by set or set by the shell"
+	echo "\$\$ Expands to the PID of the shell. In subshell, shows the invoking shell rather than the subshell."
+	echo "\$! Expands to the PID of the most recent backgorund job"
+	echo "\$0 expands to the name of the script"
+}
+
 python_if_statement(){
 	echo "Usage:"
 	echo "if Condition:"
